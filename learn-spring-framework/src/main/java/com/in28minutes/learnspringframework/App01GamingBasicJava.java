@@ -5,15 +5,15 @@ import com.in28minutes.learnspringframework.game.MarioGame;
 import com.in28minutes.learnspringframework.game.PacMan;
 import com.in28minutes.learnspringframework.game.SuperContraGame;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		//var game = new MarioGame();
-		//var game = new SuperContraGame();
-		var game = new PacMan();
-		var gameRunner = new GameRunner(game);
+		var game = new SuperContraGame();
+		// var game = new PacMan(); 
+		var gameRunner = new GameRunner(game); 
 		gameRunner.run();
 	}
 
