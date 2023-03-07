@@ -1,21 +1,16 @@
-package com.in28minutes.learnspringframework;
+package com.in28minutes.learnspringframework.game;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.in28minutes.learnspringframework.game.GameRunner;
-import com.in28minutes.learnspringframework.game.GamingConsole;
-
 @Configuration
 @ComponentScan("com.in28minutes.learnspringframework.game")
-public class App03GamingSpringBeans {
-	
+public class GamingAppLauncherSpringBeans {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try(var context = 
-				new AnnotationConfigApplicationContext(App03GamingSpringBeans.class)){			
+		try (var context = new AnnotationConfigApplicationContext(GamingAppLauncherSpringBeans.class)) {
 			context.getBean(GamingConsole.class).up();
 			context.getBean(GameRunner.class).run();
 		}
